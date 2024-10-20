@@ -34,6 +34,15 @@
         td.label-cell
           strong.label 必須
         td.arrow-box-cell
+          | 携帯番号
+        td.responsive-cell
+         .input-container
+          = f.hidden_field :mobile
+          = @estimate.mobile
+      tr
+        td.label-cell
+          strong.label 必須
+        td.arrow-box-cell
           | 電話番号
         td.responsive-cell
          .input-container
@@ -43,7 +52,7 @@
         td.label-cell
           strong.label 必須
         td.arrow-box-cell
-          | 住所
+          | 住所（ビル名・部屋番号迄記載）
         td.responsive-cell
          .input-container
           = f.hidden_field :address
@@ -61,7 +70,7 @@
         td.label-cell
           strong.label.label-blue 任意
         td.arrow-box-cell
-          | 求人ページURL
+          | 会社URL
         td.responsive-cell
          .input-container
           = f.hidden_field :url
@@ -70,34 +79,20 @@
         td.label-cell
           strong.label 必須
         td.arrow-box-cell
-          | 募集人数
-          br
-          |
+          | 買取希望額
         td.responsive-cell
          .input-container
-         = f.hidden_field :contents
-         = @estimate.contents
-         | 人
+         = f.hidden_field :price
+         = @estimate.price
       tr
         td.label-cell
           strong.label 必須
         td.arrow-box-cell
-          | 重視する点
-          br
-          |
+          | 使用用途
         td.responsive-cell
          .input-container
-         = f.hidden_field :important
-         = @estimate.important
-      tr
-        td.label-cell
-          strong.label 必須
-        td.arrow-box-cell
-          | 依頼予定時期
-        td.responsive-cell
-         .input-container
-          = f.hidden_field :order
-          = @estimate.order
+          = f.hidden_field :use
+          = @estimate.use
       tr
         td.label-cell
           strong.label.label-blue 任意
@@ -110,3 +105,10 @@
       tr
        td colspan="3"
         = f.submit "送信", class:"btn btn-primary", data: {behavior: "fb-track"}
+      javascript:
+       document.addEventListener('DOMContentLoaded', function(){
+        var button = document.querySelector("[data-behavior='fb-track']");
+        button.addEventListener('click', function() {
+          fbq('track', 'CompleteRegistration');
+        });
+       });

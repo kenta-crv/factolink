@@ -13,4 +13,23 @@
 //= require rails-ujs
 //= require_tree .
 
+$(function() {
+    $('.navToggle').click(function() {
+        $(this).toggleClass('active');
 
+        if ($(this).hasClass('active')) {
+            $('.globalMenuSp').addClass('active');
+        } else {
+            $('.globalMenuSp').removeClass('active');
+        }
+    });
+});
+
+// jsを再読み込みさせたいページで使う（/companies/pay）
+$(document).on("turbolinks:load", function () {
+  let path_name = location.pathname;
+  let path_search = location.search;
+  if (path_search == '?reload=true') {
+    window.location.href = path_name
+  }
+})

@@ -1,9 +1,9 @@
-- set_meta_tags  title: ''
-- set_meta_tags  description: ''
+- set_meta_tags  title: '自動販売機のコラムなら『自販機ねっと』'
+- set_meta_tags  description: '自販機ねっとでは、自動販売機に関する記事を執筆しています。'
 
 .index-wrapper
       h1.headline
-        | ENGIST記事一覧
+        | ファクタリング記事一覧
       .row.all-width
        - @columns.each do |column|
         .col-sm-6
@@ -28,22 +28,3 @@
          hr.line
             
 = paginate(@columns)
-.inquiry
- hr
- br
- p.push
-         span
-           | 自販機を簡単一括比較見積
-           br
-           br
-           | 以下よりお問い合わせください
- br
- br
- .center  
-  = link_to "/" do 
-    = image_tag "all-vender.webp", width:"80%"
- .center 
-   = link_to "/estimates/new", target:"_blank" do  
-    = image_tag "click3.webp", width:"70%"
- hr
- br

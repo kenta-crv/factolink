@@ -1,13 +1,50 @@
 br
  .tops-wrapper
-    h2.headline
-       | お問い合わせ完了しました。
-    p.center 
-     | 担当者より追ってご連絡差し上げます。よろしくお願い致します。
+    h2.headline お問い合わせいただきありがとうございます。  
+    p 売掛金（請求書）売却のファクタリングサービス『ファクタリンク』をご利用いただきありがとうございました。今後の流れをご確認下さい。
 
-
+ ul.flow.center
+  li
+    dl
+      dt
+        span.icon
+          | STEP.01
+        | ファクタリングの審査書類の提出
+      dd.center
+        | 頂いた内容を元に、ファクタリンクよりご連絡致します。
+        br
+        | 審査に必要な書類をご案内いたしますので、ご提出をお願いいたします。
+  li
+    dl
+      dt
+        span.icon
+          | STEP.02
+        | 審査結果を報告
+      dd.center
+        | いただいた内容を元に、社内にて審査の実施を行います。
+        br
+        | 審査結果は最短即日〜となりますが、お申し込み内容により異なります。
+        br
+  li
+    dl
+      dt
+        span.icon
+          | STEP.03
+        | 契約締結後、即入金完了
+      dd.center
+        | 内容に問題が無ければ契約締結をオンラインで実施します。
+        br
+        | 契約完了後、即時入金がされ完了となります。
 
  .center
   = link_to "トップページへ戻る", "/", class:"btn btn-primary"
 br
 br
+
+script[async src="https://www.googletagmanager.com/gtag/js?id=AW-858090558"]
+script
+  |  window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-858090558');
+script
+  |  gtag('event', 'conversion', {'send_to': 'AW-585627916/TzzVCIjG_qQDEIzyn5cC'});
+script
+  | fbq('track', 'CompleteRegistration');

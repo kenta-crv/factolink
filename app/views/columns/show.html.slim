@@ -5,7 +5,7 @@
   br
   br
   .row
-   .col-sm-4= link_to "ENGIST記事一覧に戻る", columns_path, class:"btn btn-primary"
+   .col-sm-4= link_to "自販機記事一覧に戻る", columns_path, class:"btn btn-primary"
    .col-sm-4
    .col-sm-4
   br
@@ -93,7 +93,7 @@ br
       = @column.display_heading_2.html_safe
   - if @column.file_2?
     br
-    .column-image
+    .center.column-image
       = image_tag @column.file_2.url, alt: @column.title
   - if @column.display_content_2.present?
     .body-base
